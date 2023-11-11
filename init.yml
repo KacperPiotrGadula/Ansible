@@ -5,6 +5,8 @@
   vars:
     docker_users:
       - bombel
+    bombel_password: "PassboltBombel"
+
   roles:
     - user
     - packages
