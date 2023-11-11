@@ -2,12 +2,16 @@
 - name: Initial configuration
   hosts: all
   become: true
+  user:
+    name: bombel
+    password: "{{ 'PassBolt' | password_hash('sha512') }}"
   vars:
     docker_users:
       - bombel
-    bombel_password: "PassboltBombel"
 
   roles:
     - user
     - packages
     - geerlingguy.docker
+      git_repository: "https://github.com/geerlingguy/ansible-role-docker.git"
+      git_version: "v4.1.3"
