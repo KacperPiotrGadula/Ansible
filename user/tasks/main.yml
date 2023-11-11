@@ -2,7 +2,7 @@
 # tasks file for user
 - name: Create bombel group
   group: 
-    name: panda 
+    name: bombel 
     state: present
  
 - name: Create bombel user belonging to sudo and bombel groups
