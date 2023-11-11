@@ -1,0 +1,17 @@
+- name: Install docker-compose
+  pip:
+    name:
+    - docker
+    - docker-compose
+
+- name: Git checkout
+  git:
+    repo: "{{ git_repository }}"
+    dest: "{{ deployment_path }}"
+    version: "{{ git_branch }}"
+
+- name: Run docker-compose
+  docker_compose:
+    project_src: "{{ deployment_path }}"
+    build: yes
+    debug: yes
