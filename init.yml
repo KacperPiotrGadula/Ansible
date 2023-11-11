@@ -1,0 +1,11 @@
+---
+- name:
+  hosts: all
+  become: true
+  vars:
+    docker_users:
+      - bombel
+  roles:
+    - user
+    - packages
+    - geerlingguy.docker
