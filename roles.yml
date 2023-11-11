@@ -1,5 +1,5 @@
 ---
-- name:
+- name: Initial setup
   hosts: all
   became: true
   vars:
@@ -10,7 +10,7 @@
       file:
         path: /etc/ansible/roles
         state: directory
-        mode: "0755"
+        mode: '0755'
     - name: Git checkout
       git:
         repo: "{{ git_repository }}"
