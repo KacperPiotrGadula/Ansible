@@ -1,0 +1,9 @@
+- name: First playbook
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: Create testansible.txt
+    file:
+      path: testansible.txt
+      state: touch
