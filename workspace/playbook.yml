@@ -3,11 +3,21 @@
   connection: local
 
   tasks:
-  - name: Create testansible.txt
+    #  - name: Create testansible.txt
+    #file:
+    # path: testansible.txt
+    # state: touch
+    # mode: '0754'
+
+  - name: Touch again a file, but not update time
     file:
       path: testansible.txt
       state: touch
-      mode: '0754'
-#      state: absent #remove file when file in path
-#      owner: vagrant
-#      group: vagrant
+      mode: '0755'
+      modification_time: preserve
+      access_time: preserve
+
+  - name: Remove present file
+    file:
+      path: absent.txt
+      state: absent
