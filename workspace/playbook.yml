@@ -7,3 +7,7 @@
     file:
       path: testansible.txt
       state: touch
+      mode: '0754'
+#      state: absent #remove file when file in path
+#      owner: vagrant
+#      group: vagrant
