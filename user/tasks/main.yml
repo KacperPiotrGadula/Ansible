@@ -14,7 +14,7 @@
       - sudo
 
 - name: Generate encrypted password for bombel user
-  ansible.builtin.bcrypt:
+  ansible.builtin.password_hash:
     password: "!QAZ2wsx"
   register: encrypted_password
 
