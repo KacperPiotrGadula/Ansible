@@ -13,10 +13,15 @@
       - bombel
       - sudo
 
-- name: Add password to bombel user
+- name: Generate encrypted password for bombel user
+  ansible.builtin.bcrypt:
+    password: "!QAZ2wsx"
+    register: encrypted_password
+
+- name: Set bombel user password
   user:
     name: bombel
-    password: "!QAZ2wsx"
+    password: "{{ encrypted_password.stdout }}"
  
 - name: Set authorized key for user bombel copying it from vagrant user
   authorized_key:
