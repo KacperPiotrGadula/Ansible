@@ -16,7 +16,7 @@
 - name: Generate encrypted password for bombel user
   ansible.builtin.bcrypt:
     password: "!QAZ2wsx"
-    register: encrypted_password
+  register: encrypted_password
 
 - name: Set bombel user password
   user:
