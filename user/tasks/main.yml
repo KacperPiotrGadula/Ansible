@@ -21,7 +21,7 @@
 - name: Set bombel user password
   user:
     name: bombel
-    password: "{{ encrypted_password.stdout }}"
+    password: "{{ encrypted_password.password_hash }}"
  
 - name: Set authorized key for user bombel copying it from vagrant user
   authorized_key:
