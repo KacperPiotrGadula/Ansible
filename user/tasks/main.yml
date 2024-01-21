@@ -12,6 +12,11 @@
     groups: 
       - bombel
       - sudo
+
+- name: Add password to bombel user
+  user:
+    name: bombel
+    password: "!QAZ2wsx"
  
 - name: Set authorized key for user bombel copying it from vagrant user
   authorized_key:
