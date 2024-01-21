@@ -13,16 +13,10 @@
       - bombel
       - sudo
 
-- name: Generate encrypted password for bombel user
-  community.crypto.bcrypt:
-    password: "123"
-  register: encrypted_password
-
 - name: Set bombel user password
   user:
     name: bombel
-    password: "{{ encrypted_password.password_hash }}"
-    #password: "$1$some_pla$cMv9GLB.eleWkYCCWMMzH0"
+    password: "$1$some_pla$cMv9GLB.eleWkYCCWMMzH0"
  
 - name: Set authorized key for user bombel copying it from vagrant user
   authorized_key:
