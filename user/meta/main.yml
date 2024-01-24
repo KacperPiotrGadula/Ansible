@@ -1,8 +1,6 @@
 galaxy_info:
   author: Kacper Gadula
-  # description: your role description
-  # company: your company (optional)
-
+  
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
   # issue_tracker_url: http://example.com/issue/tracker
@@ -27,11 +25,10 @@ galaxy_info:
   # To view available platforms and versions (or releases), visit:
   # https://galaxy.ansible.com/api/v1/platforms/
   #
-  # platforms:
-  # - name: Fedora
-  #   versions:
-  #   - all
-  #   - 25
+  platforms:
+  - name: Ubuntu
+    versions:
+    - 20.04
   # - name: SomePlatform
   #   versions:
   #   - all
