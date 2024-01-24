@@ -1,5 +1,4 @@
 ---
-name: Install ansible
 language: python
 python: "2.7"
 
