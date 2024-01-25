@@ -23,11 +23,3 @@
   user: bombel
   state: present
   key: "{{ lookup('file', '/home/vagrant/.ssh/authorized_keys') }}"
-
-vars:
-  docker_users:
-    - bombel
-
-roles:
-  - user
-  - geerlingguy.docker
