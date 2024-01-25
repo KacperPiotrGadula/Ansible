@@ -17,9 +17,3 @@
   user:
     name: bombel
     password: "$1$some_pla$cMv9GLB.eleWkYCCWMMzH0" #password create with use openssh salt
- 
-- name: Set authorized key for user bombel copying it from vagrant user
-  authorized_key:
-  user: bombel
-  state: present
-  key: "{{ lookup('file', '/home/vagrant/.ssh/authorized_keys') }}"
