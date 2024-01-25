@@ -4,7 +4,7 @@
   group: 
     name: bombel 
     state: present
- 
+
 - name: Create bombel user belonging to sudo and bombel groups
   user:
     name: bombel
@@ -20,6 +20,14 @@
  
 - name: Set authorized key for user bombel copying it from vagrant user
   authorized_key:
-    user: bombel
-    state: present
-    key: "{{ lookup('file', '/home/vagrant/.ssh/authorized_keys') }}"
+  user: bombel
+  state: present
+  key: "{{ lookup('file', '/home/vagrant/.ssh/authorized_keys') }}"
+
+vars:
+  docker_users:
+    - bombel
+
+roles:
+  - user
+  - geerlingguy.docker
