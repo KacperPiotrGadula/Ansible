@@ -33,3 +33,13 @@
 * include_var: myvars.yml
 * Set variables for hosts or host groups in your inventory
 * Set role-specific variables in your roles/role name/vars/directory
+
+## Facts
+* Facts: information about hosts in your inventory that's gathered by Ansible
+when it connects to a host
+* You can use these facts in your plays - they are represented as variables stored
+in a dictionary
+* You can disable fact gathering by setting 'gather_facts: False' at the playbook
+level (for example, prepare_ansible_target.yml)
+* Gather facts and print to stdout:
+    * ansible <host> -m setup -u root
