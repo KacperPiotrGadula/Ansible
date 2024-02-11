@@ -21,3 +21,11 @@
 
 * raw, synchronize, get_url, unarchive, ec2, rds
 
+## Variables
+* Variables: Just like the already used programming languages
+* Scopes: Global, Per-Play, and Per-Host
+* Start with a letter, contain only alphanumerics and underscores
+* Registered with 'register'
+* Referenced with {{ varname }} syntax
+* Dictionary variables can be accessed using regular Python and dot notation
+* my.var and my['var']
