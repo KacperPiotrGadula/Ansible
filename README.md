@@ -29,3 +29,7 @@
 * Referenced with {{ varname }} syntax
 * Dictionary variables can be accessed using regular Python and dot notation
 * my.var and my['var']
+* Explicitly include a vars YAML file from your playbook:
+* include_var: myvars.yml
+* Set variables for hosts or host groups in your inventory
+* Set role-specific variables in your roles/role name/vars/directory
